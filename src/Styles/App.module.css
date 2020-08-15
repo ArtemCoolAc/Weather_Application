@@ -1,0 +1,77 @@
+.sheet {
+  width: 100vw;
+  height: 100vh;
+  /*background-color: #0074D9;*/
+  background: linear-gradient(to top, rgba(161,235,245,1) 0%, rgba(220,191,255,1) 100%);;
+  overflow-y: auto;
+}
+
+.header {
+  width: 100%;
+  height: 20%;
+  /*background-color: rgba(255, 91, 172, 0.81);*/
+  background: radial-gradient(to top, rgba(24,209,234,1) 0%, rgba(132,76,201,1) 100%);
+  font-size: xx-large;
+  text-align: center;
+}
+
+.text {
+  position: relative;
+  /*margin-top: -0.625em;*/
+  /*top: 50%;*/
+  top: 50%;
+  margin: -0.625em auto;
+
+}
+
+.item {
+  position: relative;
+  /*left: 2.5%;*/
+  /*margin: 20px 5px;*/
+  margin: 20px auto;
+  padding: 10px 10px 10px 10px;
+  width: 90%;
+  height: 20%;
+  border-radius: 15px;
+  background-color: rgba(255,216,197,0.81);
+  animation-name: smoothDrop;
+  animation-duration: 0.25s;
+  transition: all 0.5s linear;
+  box-shadow: 2px 2px 4px 0px #006773;
+  border-radius: 15px 15px 15px 15px;
+}
+
+@media screen and (min-width: 900px) {
+  .item {
+    width: 70%;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .item {
+    width: 50%;
+  }
+}
+
+.item:hover,
+.item:focus,
+.item:active {
+  box-shadow: 15px 15px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.05);
+}
+
+@keyframes smoothDrop {
+  from {
+    transform: translate(-100%) scaleX(0);
+  }
+  to {
+    transform: translate(0) scaleX(1);
+  }
+}
+
+button {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  outline: none;
+}

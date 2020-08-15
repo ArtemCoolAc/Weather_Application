@@ -1,0 +1,28 @@
+.wrapper {
+  /*margin: 0 auto;*/
+  height: 50vh;
+  width: 100%;
+}
+
+.gridContainer {
+  height: 50vh;
+  display: grid;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 1px 1px;
+  grid-template-areas: ". central .";
+}
+
+.central {
+  grid-area: central;
+}
+
+@media screen and (min-width: 900px){
+  .gridContainer {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}
+
+/*#YMaps {*/
+/*  margin: 0 auto;*/
+/*}*/
